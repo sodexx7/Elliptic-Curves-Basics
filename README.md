@@ -6,7 +6,7 @@
   - `python3 checkSpecp256k1Point.py x y` **(should check x,y must in [1,p-1])?**
   - `python3 GetRandomPoint.py `
 
-**2. generate an address that starts with 0x0000**
+**2. generate an address that starts with 0x0000** [GenerateProfanityAddress](GenerateProfanityAddress.py)
 
 - `python3 GenerateProfanityAddress.py`
 
@@ -55,7 +55,7 @@
    3. Spin up a GPU Example instance using vast.ai.
 4. The private-key can be calculated by the generated vanity-addresses which have some problem. [the-profanity-address-hack-how-are-vanity-addresses-generated](https://medium.com/coinmonks/the-profanity-address-hack-how-are-vanity-addresses-generated-cce40ba5ed39)
    1. `python generate_vanity_address_ethereum_problem.py`, the logic generate the vulnerability address.
-   2. implement the code to hack the vanity_address which has problem
+   2. implement the code to hack the vanity_address which has problem **toodo**
 
 ## Questions
 
