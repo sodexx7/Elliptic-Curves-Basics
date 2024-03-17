@@ -59,4 +59,7 @@
 
 ## Questions
 
-1. when checking point(x,y) # x,y must in the field [1,p-1] todo check ?
+1.  when checking point(x,y) # x,y must in the field [1,p-1] todo check ?
+2.  check below
+    - ECDSA (for Elliptic Curve Digital Signature Algorithm), can sign messages that are greater than P?
+    - RSA can only sign messages that are smaller than its p?
