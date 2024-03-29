@@ -9,7 +9,7 @@
 #   1. The field prime is 2^256 - 2^32 - 977(2**256 - 2**32 - 2**9 - 2**8 - 2**7 - 2**6 - 2**4 -1). (115792089237316195423570985008687907853269984665640564039457584007908834671663)
 #   2. The generator point G is 
 #      (0x79BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798, 0x483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B8)
-#   3. order(Number of points in the field) : 115792089237316195423570985008687907852837564279074904382605163141518161494337(0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141)
+#   3. order(Number of points in the field) : 115792089237316195423570985008687907852837564279074904382605163141518161494337(0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141)(2**256)
 
 Pcurve = 2**256 - 2**32 - 2**9 - 2**8 - 2**7 - 2**6 - 2**4 -1 # The proven prime
 N=0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141 # Number of points in the field
@@ -21,9 +21,9 @@ import sys
 from math import pow
 
 def check_point(x, y):
-    # x,y must in the field [1,p-1]? todo check
-    # if(x==0 or x>Pcurve-1 and y==0 or y>Pcurve-1):
-    #     return False
+    # x,y must in the field [1,p-1]
+    if(x==0 or x>Pcurve-1 and y==0 or y>Pcurve-1):
+        return False
     return (pow(y, 2)% Pcurve == (pow(x, 3) + 7) % Pcurve)
 
 if __name__ == "__main__":
